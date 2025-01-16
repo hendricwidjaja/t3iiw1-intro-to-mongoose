@@ -5,8 +5,15 @@ mongosh - mongo shell
 mongod - Mongo service daemon
 mongos - sharding or clustering for mongodb
 
-- Start MongoDB Server
+- MongoDB Server Commands
+[//]: # (Starts MongoDB as a macOS service)
 brew services start mongodb-community@8.0
+
+[//]: # (Stops MongoDB as a macOS service)
+brew services stop mongodb-community@8.0
+
+[//]: # (Verify that MongoDB has started - check if "mongodb-community" is listed as "started")
+brew services list
 
 - Start MongoDB Server
 sudo service mongod start
