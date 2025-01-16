@@ -11,7 +11,8 @@ const PostSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        minLength: 10
+        minLength: 10,
+        unique: true
     },
     content: String,
     date: {
@@ -20,7 +21,7 @@ const PostSchema = new mongoose.Schema({
     }
 });
 
-// Make a model based on the schema
+// Make a model based on the schema (blueprint for documents in a collection)
 const PostModel = mongoose.model("Post", PostSchema);
 // Mongoose automatically looks for a collection with the plural lowercase name 'posts'
 
