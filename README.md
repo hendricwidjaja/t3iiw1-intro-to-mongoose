@@ -27,3 +27,8 @@ sudo service mongod restart
 3. Show the list of databases: `show dbs`
 4. Connect to a particular database: `use dbname`
 5. `db.posts.find()`
+
+Saturday
+- Use MongoDB in Express Route
+- Document Referencing
+- Subdocuments

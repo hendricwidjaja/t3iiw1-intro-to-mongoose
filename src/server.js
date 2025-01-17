@@ -8,8 +8,12 @@ const express = require("express");
 // Instance of the express for configuration
 const app = express();
 
-// Server application configuration goes here
+// Server application configuration goes here...
 //
+const PostRoute = require("./routes/PostRoute.js");
+app.use("/posts", PostRoute);
+
+
 // app.verb(path, callback);
 app.get("/", (request, response) => {
     // response.send("<h1>Hello World!</h1>");

@@ -12,6 +12,7 @@ async function createPost(title, content) {
     return result;
 }
 
+// Finds first document which matches the query criteria
 async function getPost(query) {
     // let result = await PostModel.findOne({key: value})
     let result = await PostModel.findOne(query);
@@ -19,8 +20,11 @@ async function getPost(query) {
     return result;
 }
 
+// Finds all documents which matches the query criteria
 async function getPosts(query) {
     let result = await PostModel.find(query);
+    
+    return result;
 }
 
 async function updatePost() {}
