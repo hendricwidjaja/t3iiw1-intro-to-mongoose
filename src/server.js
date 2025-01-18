@@ -8,6 +8,9 @@ const express = require("express");
 // Instance of the express for configuration
 const app = express();
 
+// Middleware to allow express to read JSON in request body
+app.use(express.json());
+
 // Server application configuration goes here...
 //
 const PostRoute = require("./routes/PostRoute.js");
