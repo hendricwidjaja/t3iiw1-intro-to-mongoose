@@ -2,12 +2,13 @@
 
 const { PostModel } = require("../models/PostModel")
 
-async function createPost(title, content) {
+async function createPost(title, content, authorId) {
     let result = await PostModel.create({
         title: title,
-        content: content
+        content: content,
+        author: authorId
         // Date has a default value
-    })
+    });
 
     return result;
 }
@@ -23,7 +24,7 @@ async function getPost(query) {
 // Finds all documents which matches the query criteria
 async function getPosts(query) {
     let result = await PostModel.find(query);
-    
+
     return result;
 }
 
